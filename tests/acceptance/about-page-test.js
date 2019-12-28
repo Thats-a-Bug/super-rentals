@@ -7,19 +7,23 @@ import {
   visit,
 } from '@ember/test-helpers'
 
+import { percySnapshot } from 'ember-percy';
+
 module('Acceptance | about page', function(hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
 
   test('should link to information about the company', async function(assert) {
     await visit('/rentals');
-    await click(".menu-about");
+    await click(".button-to-about");
     assert.equal(currentURL(), '/about', 'should navigate to about');
+    await percySnapshot("button to home on about page", {scope: ".body"});
   });
-
   test('should link to home page', async function(assert) {
     await visit('/about');
-    await click(".menu-home");
+    await click(".button-to-home");
     assert.equal(currentURL(), '/rentals', 'should navigate to home');
   });
+
 });
+

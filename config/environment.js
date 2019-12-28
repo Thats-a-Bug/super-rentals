@@ -30,7 +30,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
-
+  // 3082bb713b1ea70928ffdf835308ec8c16ae413dd296c5d3a763ce0d6a087288
   if (environment === 'test') {
     // Testem prefers this...
     ENV.locationType = 'none';

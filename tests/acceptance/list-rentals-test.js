@@ -11,6 +11,8 @@ import {
   triggerKeyEvent
 } from '@ember/test-helpers'
 
+import { percySnapshot } from 'ember-percy';
+
 let StubMapsService = Service.extend({
   getMapElement() {
     return resolve(document.createElement('div'));
@@ -28,6 +30,7 @@ module('Acceptance | list rentals', function(hooks) {
   test('should redirect to rentals route', async function(assert) {
     await visit('/');
     assert.equal(currentURL(), '/rentals', 'should redirect automatically');
+    await percySnapshot("button to about on home page", {scope: ".body"});
   });
 
   test('should link to contact information', async function(assert) {
