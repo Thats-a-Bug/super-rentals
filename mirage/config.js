@@ -42,7 +42,7 @@ export default function() {
       attributes: {
         title: "Downtown Charm",
         owner: "Violet Beauregarde",
-        city: "Portland",
+        city: "Seatle",
         category: "Apartment",
         bedrooms: 3,
         image: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg",

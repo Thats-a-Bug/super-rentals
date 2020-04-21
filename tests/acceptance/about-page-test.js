@@ -19,6 +19,7 @@ module('Acceptance | about page', function(hooks) {
     assert.equal(currentURL(), '/about', 'should navigate to about');
     await percySnapshot("button to home about page", {scope: ".body"})
   });
+
   test('should link to home page', async function(assert) {
     await visit('/about');
     await click(".button-to-home");
